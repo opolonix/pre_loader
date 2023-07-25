@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>...</title>
+</head>
+<body>
+    <div class="pre_loader">
+        <style>
+            .pre_loader {
+                width: 100vw;
+                height: 100vh;
+                background-color: #fff;
+                z-index: 1000;
+            }
+            .rotate_boxes div{
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                top: calc(50% - 25px);
+                left: calc(50% - 25px);
+            }
+            .rotate_boxes div:nth-child(1){
+                background-color: #C3C3C3;
+                z-index: 1001;
+                animation: 2s cubic-bezier(0.65, 0, 0.5, 1) 0s normal none infinite running rotate_deg;
+            }
+            .rotate_boxes div:nth-child(2){
+                background-color: #818181;
+                z-index: 1002;
+                animation: 2s cubic-bezier(0.6, 0, 0.4, 1) 0s normal none infinite running rotate_deg;
+            }
+            .rotate_boxes div:nth-child(3){
+                background-color: #515151;
+                z-index: 1003;
+                animation: 2s cubic-bezier(0.55, 0, 0.3, 1) 0s normal none infinite running rotate_deg;
+            }
+            .rotate_boxes div:nth-child(4){
+                background-color: #323232;
+                z-index: 1004;
+                animation: 2s cubic-bezier(0.5, 0, 0.2, 1) 0s normal none infinite running rotate_deg;
+            }
+            @keyframes rotate_deg {
+                0% {transform: rotate(0deg);}
+                100% {transform: rotate(180deg);}
+            }   
+        </style>
+        <div class="rotate_boxes">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>
